@@ -1,0 +1,8 @@
+node_modules
+.vscode
+.env
+/bin
+/coverage
+/src/sample
+/lib/*
+/binaries/*

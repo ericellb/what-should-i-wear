@@ -1,0 +1,39 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "@typescript-eslint"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "mocha": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    // enforce explicit return types on functions
+    "@typescript-eslint/explicit-function-return-type": "off",
+    // disable prefer default export
+    "import/prefer-default-export": "off",
+    // disable import extensions
+    "import/extensions": "off"
+  },
+  "globals": {
+    "expect": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        // disable no unused expressions for test files
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
+}
